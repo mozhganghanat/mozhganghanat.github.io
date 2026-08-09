@@ -1,5 +1,5 @@
 /* ================================
-   General
+   Base
 ================================ */
 
 * {
@@ -30,11 +30,6 @@ a {
     color: inherit;
 }
 
-
-/* ================================
-   Container
-================================ */
-
 .container {
     width: min(1120px, 92%);
     margin: 0 auto;
@@ -50,11 +45,11 @@ a {
     top: 0;
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.94);
 
-    border-bottom: 1px solid #e8ebef;
+    border-bottom: 1px solid #e8edf2;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
 }
 
 .nav-container {
@@ -73,7 +68,7 @@ a {
     font-size: 20px;
     font-weight: 650;
 
-    color: #172033;
+    color: #18212f;
 
     white-space: nowrap;
 }
@@ -82,7 +77,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
     gap: 20px;
 }
 
@@ -91,11 +85,13 @@ nav a {
 
     font-size: 14px;
 
-    color: #4b5563;
+    color: #56616d;
+
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #2563eb;
+    color: #287c78;
 }
 
 
@@ -104,44 +100,59 @@ nav a:hover {
 ================================ */
 
 .hero {
-    padding: 120px 0 110px;
+    padding: 100px 0 110px;
 
     background:
+        radial-gradient(
+            circle at 85% 20%,
+            #e8f4f2 0,
+            #e8f4f2 15%,
+            transparent 40%
+        ),
         linear-gradient(
-            180deg,
-            #f8fafc 0%,
-            #ffffff 100%
+            135deg,
+            #f7faf9 0%,
+            #ffffff 65%
         );
 
-    border-bottom: 1px solid #edf0f3;
+    border-bottom: 1px solid #edf1f2;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.25fr 0.75fr;
+
+    align-items: center;
+
+    gap: 80px;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 720px;
 }
 
 .eyebrow {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
 
-    color: #2563eb;
+    color: #287c78;
 
     font-size: 13px;
 
     font-weight: 700;
 
-    letter-spacing: 1.4px;
+    letter-spacing: 1.5px;
 
     text-transform: uppercase;
 }
 
 .hero h1 {
-    max-width: 850px;
-
     margin: 0 0 25px;
 
-    color: #172033;
+    color: #18212f;
 
-    font-size: clamp(42px, 6vw, 68px);
+    font-size: clamp(42px, 5.5vw, 66px);
 
     line-height: 1.08;
 
@@ -149,15 +160,55 @@ nav a:hover {
 }
 
 .hero-text {
-    max-width: 760px;
+    max-width: 700px;
 
     margin: 0;
 
-    color: #59636f;
+    color: #5d6873;
 
-    font-size: 19px;
+    font-size: 18px;
 
     line-height: 1.8;
+}
+
+
+/* ================================
+   Hero Photo
+================================ */
+
+.hero-photo {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.hero-photo img {
+    width: 340px;
+    height: 410px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    border: 8px solid #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(31, 55, 63, 0.16);
+
+    transform: rotate(1.5deg);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-photo img:hover {
+    transform: rotate(0deg) translateY(-4px);
+
+    box-shadow:
+        0 30px 70px rgba(31, 55, 63, 0.20);
 }
 
 
@@ -180,7 +231,7 @@ nav a:hover {
 
     padding: 11px 20px;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     text-decoration: none;
 
@@ -192,27 +243,27 @@ nav a:hover {
 }
 
 .button.primary {
-    background: #2563eb;
+    background: #287c78;
 
     color: #ffffff;
 }
 
 .button.primary:hover {
-    background: #1d4ed8;
+    background: #216762;
 }
 
 .button.secondary {
     background: #ffffff;
 
-    color: #374151;
+    color: #34404a;
 
-    border: 1px solid #d8dde5;
+    border: 1px solid #d7dfe2;
 }
 
 .button.secondary:hover {
-    border-color: #2563eb;
+    border-color: #287c78;
 
-    color: #2563eb;
+    color: #287c78;
 }
 
 
@@ -225,7 +276,7 @@ nav a:hover {
 }
 
 .light-section {
-    background: #f8fafc;
+    background: #f7faf9;
 }
 
 .section-heading {
@@ -237,15 +288,15 @@ nav a:hover {
 .section-heading h2 {
     margin: 0 0 12px;
 
+    color: #18212f;
+
     font-size: 38px;
 
     line-height: 1.2;
-
-    color: #172033;
 }
 
 .section-heading p:not(.eyebrow) {
-    color: #68727e;
+    color: #68737d;
 
     font-size: 17px;
 }
@@ -269,9 +320,9 @@ nav a:hover {
 
     background: #ffffff;
 
-    border: 1px solid #e5e9ee;
+    border: 1px solid #e3e9e8;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     transition:
         transform 0.2s ease,
@@ -279,16 +330,16 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 12px 30px rgba(15, 23, 42, 0.07);
+        0 15px 35px rgba(27, 55, 58, 0.08);
 }
 
 .card h3 {
     margin: 0 0 12px;
 
-    color: #172033;
+    color: #18212f;
 
     font-size: 20px;
 }
@@ -296,7 +347,7 @@ nav a:hover {
 .card p {
     margin: 0;
 
-    color: #626c78;
+    color: #626d76;
 
     font-size: 15px;
 }
@@ -315,29 +366,29 @@ nav a:hover {
 
     gap: 30px;
 
-    padding: 30px;
+    padding: 32px;
 
     background: #ffffff;
 
-    border: 1px solid #e5e9ee;
+    border: 1px solid #e3e9e8;
 
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .article-preview h3 {
     margin: 0 0 8px;
 
-    color: #172033;
+    color: #18212f;
 
     font-size: 23px;
 }
 
 .article-preview p {
-    color: #626c78;
+    color: #626d76;
 }
 
 .article-label {
-    color: #2563eb !important;
+    color: #287c78 !important;
 
     font-size: 12px !important;
 
@@ -347,7 +398,7 @@ nav a:hover {
 }
 
 .text-link {
-    color: #2563eb;
+    color: #287c78;
 
     text-decoration: none;
 
@@ -381,25 +432,25 @@ nav a:hover {
 .two-column h2 {
     margin-top: 0;
 
-    font-size: 38px;
+    color: #18212f;
 
-    color: #172033;
+    font-size: 38px;
 }
 
 .resource-box {
     padding: 35px;
 
-    background: #f8fafc;
+    background: #f7faf9;
 
-    border: 1px solid #e5e9ee;
+    border: 1px solid #dfe9e7;
 
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .resource-box h3 {
     margin-top: 0;
 
-    color: #172033;
+    color: #18212f;
 }
 
 
@@ -419,13 +470,13 @@ nav a:hover {
 .about-home h2 {
     margin-top: 0;
 
-    color: #172033;
+    color: #18212f;
 
     font-size: 38px;
 }
 
 .about-home p {
-    color: #5f6975;
+    color: #5f6a74;
 
     font-size: 17px;
 }
@@ -438,7 +489,7 @@ nav a:hover {
 .contact-section {
     padding: 100px 0;
 
-    background: #172033;
+    background: #18212f;
 
     color: #ffffff;
 }
@@ -454,7 +505,7 @@ nav a:hover {
 }
 
 .contact-content p:not(.eyebrow) {
-    color: #cbd2dc;
+    color: #cbd4d8;
 
     font-size: 17px;
 
@@ -462,7 +513,7 @@ nav a:hover {
 }
 
 .contact-section .eyebrow {
-    color: #93c5fd;
+    color: #8ed0ca;
 }
 
 
@@ -471,9 +522,9 @@ nav a:hover {
 ================================ */
 
 footer {
-    background: #111827;
+    background: #111820;
 
-    color: #9ca3af;
+    color: #9da8ae;
 
     padding: 28px 0;
 }
@@ -514,7 +565,28 @@ footer {
     }
 
     .hero {
-        padding: 80px 0;
+        padding: 75px 0 80px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        text-align: center;
+
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-photo img {
+        width: 280px;
+        height: 340px;
     }
 
     .cards {
@@ -533,7 +605,6 @@ footer {
 
         align-items: flex-start;
     }
-
 }
 
 
