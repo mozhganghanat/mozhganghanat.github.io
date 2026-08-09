@@ -3,181 +3,992 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mozhgan Ghanat | Academic Website</title>
+
+    <title>Mozhgan Ghanat | Educational Technology Researcher</title>
+
     <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f8fa;
-            color: #222;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #f6f8fb;
+            color: #263238;
+            line-height: 1.7;
         }
 
-        header {
-            background: #ffffff;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .subtitle {
-            font-size: 22px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .interests {
-            font-size: 17px;
-            color: #777;
-        }
+        /* Navigation */
 
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             background: #ffffff;
-            padding: 18px;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 15px 20px;
             text-align: center;
-            border-bottom: 1px solid #e5e5e5;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 14px;
+            color: #374151;
             text-decoration: none;
-            color: #333;
+            font-size: 15px;
             font-weight: 500;
         }
 
         nav a:hover {
-            color: #0066cc;
+            color: #2563eb;
         }
 
+        /* Hero */
+
+        .hero {
+            background: #ffffff;
+            padding: 90px 20px 80px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin: 0 0 12px;
+            color: #172033;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            font-weight: 400;
+            color: #4b5563;
+            margin: 0 0 18px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        .research-tags {
+            margin-top: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: #374151;
+            padding: 7px 13px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Main */
+
         main {
-            max-width: 900px;
+            max-width: 1050px;
             margin: 50px auto;
             padding: 0 25px;
         }
 
         section {
-            background: white;
-            padding: 35px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: #ffffff;
+            margin-bottom: 30px;
+            padding: 42px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
         }
 
-        h2 {
+        h2.section-title {
+            font-size: 30px;
+            color: #172033;
             margin-top: 0;
-            font-size: 28px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 12px;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
+        h3 {
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #4b5563;
+        }
+
+        ul {
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Education / Experience */
+
+        .item {
+            margin-bottom: 30px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-title {
+            font-size: 19px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .item-meta {
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        /* Publications */
+
+        .publication {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #edf0f3;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .publication a:hover {
+            text-decoration: underline;
+        }
+
+        /* Buttons */
+
+        .button {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-top: 10px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
             font-size: 14px;
         }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #172033;
+            color: #d1d5db;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 28px 22px;
+            }
+
+            h2.section-title {
+                font-size: 25px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <h1>Mozhgan Ghanat</h1>
 
-    <div class="subtitle">
-        Educational Technology Researcher
-    </div>
-
-    <div class="interests">
-        AI in Education · Inclusive Education · Educational Equity
-    </div>
-</header>
+<!-- Navigation -->
 
 <nav>
-    <a href="#about">About Me</a>
+
+    <a href="#about">About</a>
     <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
     <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
+    <a href="#presentations">Presentations</a>
+    <a href="#awards">Awards</a>
     <a href="#contact">Contact</a>
+
 </nav>
+
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <h1>Mozhgan Ghanat</h1>
+
+    <h2>Educational Technology Researcher</h2>
+
+    <p>
+        Researcher in Educational Technology with interests in
+        artificial intelligence, inclusive education, educational equity,
+        social justice, and AI for neurodiverse learners.
+    </p>
+
+    <div class="research-tags">
+
+        <span class="tag">AI in Education</span>
+        <span class="tag">Inclusive Education</span>
+        <span class="tag">Educational Equity</span>
+        <span class="tag">Social Justice in Education</span>
+        <span class="tag">AI for Neurodiverse Learners</span>
+        <span class="tag">Human-Centered AI</span>
+
+    </div>
+
+</header>
+
 
 <main>
 
-    <section id="about">
-        <h2>About Me</h2>
+
+<!-- About -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+        I am an Educational Technology researcher with an academic and
+        professional background in educational technology, inclusive
+        education, and special education.
+    </p>
+
+    <p>
+        I hold an M.Sc. in Educational Technology from Allameh Tabataba'i
+        University, Tehran, where I graduated ranked first in my cohort.
+        My research and professional experiences include educational
+        technology, inclusive learning, assistive technologies,
+        artificial intelligence in education, and technology-supported
+        learning for students with special needs.
+    </p>
+
+    <p>
+        I also have several years of experience working with elementary
+        school students and supporting learners with diverse educational
+        needs.
+    </p>
+
+</section>
+
+
+<!-- Research -->
+
+<section id="research">
+
+    <h2 class="section-title">Research Interests</h2>
+
+    <ul>
+
+        <li>Artificial Intelligence in Education</li>
+
+        <li>Inclusive Education</li>
+
+        <li>Educational Equity</li>
+
+        <li>Social Justice in Education</li>
+
+        <li>AI for Neurodiverse Learners</li>
+
+        <li>Human-Centered AI</li>
+
+    </ul>
+
+</section>
+
+
+<!-- Education -->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+
+    <div class="item">
+
+        <div class="item-title">
+            M.Sc. in Educational Technology
+        </div>
+
+        <div class="item-meta">
+            Allameh Tabataba'i University, Tehran, Iran | 2021–2023
+        </div>
 
         <p>
-            I am an Educational Technology researcher interested in
-            Artificial Intelligence, inclusive education, and equitable
-            learning environments.
+            GPA: 19.2/20 — Ranked 1st in cohort
         </p>
 
         <p>
-            My research interests lie at the intersection of educational
-            technology, artificial intelligence, inclusive learning,
-            and educational equity.
+            <strong>Thesis:</strong>
+            Effectiveness of a Computer Game on Facial Emotion Recognition
+            and Understanding Skills in Hard-of-Hearing Children
         </p>
-    </section>
-
-
-    <section id="research">
-        <h2>Research Interests</h2>
-
-        <ul>
-            <li>Artificial Intelligence in Education</li>
-            <li>Inclusive Education</li>
-            <li>Educational Equity and Social Justice</li>
-            <li>AI-supported Learning</li>
-            <li>Special and Inclusive Education</li>
-            <li>Human-Centered AI</li>
-        </ul>
-    </section>
-
-
-    <section id="publications">
-        <h2>Publications</h2>
 
         <p>
-            My publications and research outputs will be listed here.
+            <strong>Supervisor:</strong>
+            Dr. Esmaell Zaraii Zavaraki
         </p>
-    </section>
+
+    </div>
 
 
-    <section id="projects">
-        <h2>Research Projects</h2>
+    <div class="item">
+
+        <div class="item-title">
+            B.Sc. in Agricultural Engineering
+        </div>
+
+        <div class="item-meta">
+            University of Arak, Arak, Iran | 2009–2013
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Experience -->
+
+<section id="experience">
+
+    <h2 class="section-title">Work & Research Experience</h2>
+
+
+    <div class="item">
+
+        <div class="item-title">
+            Research Assistant
+        </div>
+
+        <div class="item-meta">
+            Department of Educational Technology, University of Arak | 2025–Present
+        </div>
 
         <p>
-            This section will present my ongoing and completed research
-            projects.
+            Conducted literature reviews, prepared manuscripts, collected
+            data, and coordinated workshops.
         </p>
-    </section>
-
-
-    <section id="cv">
-        <h2>Curriculum Vitae</h2>
 
         <p>
-            My academic CV will be available here.
+            <strong>Supervisor:</strong> Dr. Rahim Moradi
         </p>
-    </section>
+
+    </div>
 
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <div class="item">
+
+        <div class="item-title">
+            Research Assistant
+        </div>
+
+        <div class="item-meta">
+            Department of Educational Technology, Allameh Tabataba'i University | 2022–2023
+        </div>
 
         <p>
-            Email: your-email@example.com
+            Research activities under the supervision of Dr. Fatemeh Jafarkhani.
         </p>
-    </section>
+
+    </div>
+
+
+    <div class="item">
+
+        <div class="item-title">
+            Elementary School Teacher
+        </div>
+
+        <div class="item-meta">
+            Private Schools, Arak, Iran | Sep 2018–Jun 2022
+        </div>
+
+        <p>
+            Taught core subjects to 4th and 5th grade students in classes
+            of approximately 20–30 students. Worked with students with
+            hearing impairments, ADHD, and autism spectrum disorder (ASD).
+        </p>
+
+        <p>
+            Developed individualized learning plans and used assistive
+            technologies to enhance student engagement.
+        </p>
+
+    </div>
+
+
+    <div class="item">
+
+        <div class="item-title">
+            Teaching Assistant
+        </div>
+
+        <div class="item-meta">
+            Private Schools, Tehran, Iran | Sep 2014–Feb 2018
+        </div>
+
+        <p>
+            Assisted with classroom instruction and student support.
+        </p>
+
+    </div>
+
+
+    <div class="item">
+
+        <div class="item-title">
+            Speech Therapy Assistant
+        </div>
+
+        <div class="item-meta">
+            Speech Therapy Centers, Arak, Iran
+        </div>
+
+        <p>
+            Supported children with communication disorders through
+            tailored interventions and collaborated with therapists
+            to design educational activities for children with special needs.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Publications -->
+
+<section id="publications">
+
+    <h2 class="section-title">Selected Journal Articles</h2>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M., Zavaraki, E. Z., Jafarkhani, F., & Bakhtiarvand, M. (2025).
+        </strong>
+
+        Effectiveness of a Computer Game for Recognizing and Understanding
+        Facial Emotions in Hearing-Impaired Children.
+        <em>Journal of Elementary Education, 18(3), 325–342.</em>
+
+        <br>
+
+        <a href="https://doi.org/10.18690/rei.4926" target="_blank">
+            DOI
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Jafarkhani, F., Mohseni Fard, H., Yazdi, A., & Ghanat, M. (2025).
+        </strong>
+
+        A review of bibliometric studies: Dyslexia and game-based learning.
+        <em>Psychology of Exceptional Individuals.</em>
+
+        <br>
+
+        <a href="https://doi.org/10.22054/jpe.2024.79352.2694" target="_blank">
+            DOI
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M., Rashidi, Z., & Jafarkhani, F. (2025).
+        </strong>
+
+        A systematic review of mobile learning for Students with Special Needs.
+        <em>Psychology of Exceptional Individuals, 15(58).</em>
+
+        <br>
+
+        <a href="https://doi.org/10.22054/jpe.2025.85247.2808" target="_blank">
+            DOI
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Moradi, R., & Ghanat, M. (Accepted, in press).
+        </strong>
+
+        A research synthesis of deep learning applications in video-based
+        analysis of social interactions for early diagnosis of autism
+        spectrum disorder in preschool children.
+        <em>Empowerment of Exceptional Children.</em>
+
+        <br>
+
+        <a href="https://www.ceciranj.ir/article_246854_0fd2aa653d00f848d82afe27000fe007.pdf"
+           target="_blank">
+            Article
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Moradi, R., Ghanat, M., & Bashirnejad, H. (Accepted, in press).
+        </strong>
+
+        The Relationship Between the Four Components of Teachers’ AI Literacy
+        and Their Use of AI Capabilities in Designing Intelligent Interactive
+        Learning Activities for Students with Special Needs.
+        <em>Psychology of Exceptional Individuals.</em>
+
+    </div>
+
+
+    <h3>Manuscripts in Progress</h3>
+
+    <p>
+
+        <strong>
+            Ghanat, M., & Bahrani, M.
+        </strong>
+
+        A Systematic Review and Meta-Analysis of NLP-Based Generative AI
+        Feedback Systems for Enhancing Social Communication in Students
+        with Autism Spectrum Disorder.
+
+    </p>
+
+
+    <h3>Books in Progress</h3>
+
+    <p>
+
+        <strong>
+            Moradi, R., & Ghanat, M.
+        </strong>
+
+        A Practical Guide to Integrating AI in Special Education:
+        For Teachers, Parents, and Specialists.
+
+    </p>
+
+
+    <h3>Book Translation</h3>
+
+    <p>
+
+        Lancioni, G. E., & Singh, N. N. (Eds.). (2014).
+        <em>Assistive Technologies for People with Diverse Abilities.</em>
+        Springer.
+
+        Translated by Mozhgan Ghanat and colleagues.
+        Published by Allameh Tabataba'i University Press.
+
+    </p>
+
+</section>
+
+
+<!-- Presentations -->
+
+<section id="presentations">
+
+    <h2 class="section-title">Conference Presentations</h2>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M., & Jafarkhani, F. (2025).
+        </strong>
+
+        Natural Language Processing in Identifying Learning Disabilities.
+
+        <br>
+
+        5th Conference of Educational Technology Association,
+        University of Kharazmi, Tehran, Iran.
+
+        <br>
+
+        <a href="https://conf.isc.ac/fa/article.php?paperId=600678&cnfId=11805"
+           target="_blank">
+            Conference Record
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M. (2024).
+        </strong>
+
+        Designing and Developing Mobile Learning for Preschool Children.
+
+        <br>
+
+        Third National Mobile Learning Conference,
+        Allameh Tabataba'i University, Tehran.
+
+        <br>
+
+        <a href="https://civilica.com/doc/1850916/" target="_blank">
+            Conference Record
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M., & Heydari, M. (2023).
+        </strong>
+
+        Assistive Technologies for Special Needs.
+
+        <br>
+
+        First International Conference, Babol, Iran.
+
+        <br>
+
+        <a href="https://civilica.com/doc/1699423/" target="_blank">
+            Conference Record
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Heydari, M., & Ghanat, M. (2023).
+        </strong>
+
+        Learning Centers as Platforms for Transformation.
+
+        <br>
+
+        Babol, Iran.
+
+        <br>
+
+        <a href="https://civilica.com/doc/1699435/" target="_blank">
+            Conference Record
+        </a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <strong>
+            Ghanat, M., & Moradi, R. (Accepted for presentation, 2026).
+        </strong>
+
+        Exploring global experiences in addressing blended learning challenges
+        and developing adaptive requirements for Iran's educational system.
+
+        <br>
+
+        The 4th National and the 1st International Conference on Mobile
+        Learning in the Age of Artificial Intelligence, Tehran, Iran.
+
+    </div>
+
+</section>
+
+
+<!-- Other Publications -->
+
+<section>
+
+    <h2 class="section-title">
+        Other Publications
+    </h2>
+
+    <div class="publication">
+
+        Ghanat, M. (2025).
+        Plickers: A Revolutionary Approach to Interactive and Innovative
+        Online Assessment in Education.
+        <em>Journal of Educational Technology Development.</em>
+
+    </div>
+
+    <div class="publication">
+
+        Ghanat, M. (2025).
+        Artificial Intelligence and Educational Equity:
+        Solutions and Challenges for Students with Special Needs.
+        <em>Journal of Educational Technology Development.</em>
+
+    </div>
+
+    <div class="publication">
+
+        Ghanat, M. (2024).
+        Artificial Intelligence and Special Education.
+        <em>Journal of Educational Technology Development.</em>
+
+        <br>
+
+        <a href="https://www.magiran.com/p2637872" target="_blank">
+            Publication
+        </a>
+
+    </div>
+
+    <div class="publication">
+
+        Ghanat, M. (2023).
+        Why Should Scratch Be Taught in Schools?
+        <em>Journal of Educational Technology Development.</em>
+
+        <br>
+
+        <a href="https://www.magiran.com/p2637878" target="_blank">
+            Publication
+        </a>
+
+    </div>
+
+    <div class="publication">
+
+        Ghanat, M. (2023).
+        Introducing the Game "Let's Face It."
+        <em>Journal of Educational Technology Development.</em>
+
+        <br>
+
+        <a href="https://www.magiran.com/p2637872" target="_blank">
+            Publication
+        </a>
+
+    </div>
+
+    <div class="publication">
+
+        Ghanat, M. (2023).
+        Introducing the Lumosity Site.
+        <em>Journal of Educational Technology Development.</em>
+
+        <br>
+
+        <a href="https://www.magiran.com/p2757262" target="_blank">
+            Publication
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Digital Competence -->
+
+<section>
+
+    <h2 class="section-title">Digital Competence</h2>
+
+    <ul>
+
+        <li>
+            Research Methods: Systematic Reviews (PRISMA),
+            Meta-analysis, Mixed-Methods Research
+        </li>
+
+        <li>
+            Reference Management: EndNote, Mendeley
+        </li>
+
+        <li>
+            Data Analysis: SPSS (Basic)
+        </li>
+
+        <li>
+            Educational Technology: Designed EMOFIT game for special education
+        </li>
+
+        <li>
+            Interest in social robotics programming
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- Awards -->
+
+<section id="awards">
+
+    <h2 class="section-title">Awards & Honors</h2>
+
+    <ul>
+
+        <li>
+            Ranked 1st among 14 M.Sc. students,
+            Allameh Tabataba'i University (2023).
+        </li>
+
+        <li>
+            Ranked 16th out of 24,000 participants
+            in the national graduate entrance exam in Iran.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- Community -->
+
+<section>
+
+    <h2 class="section-title">Community Engagement</h2>
+
+    <ul>
+
+        <li>
+            Teaching in underprivileged areas (2019).
+        </li>
+
+        <li>
+            Audio textbook recording for blind students (2021).
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- Memberships -->
+
+<section>
+
+    <h2 class="section-title">Professional Memberships</h2>
+
+    <ul>
+
+        <li>
+            Iranian Association of Educational Technology
+        </li>
+
+        <li>
+            Educational Technology Student Association,
+            Allameh Tabataba'i University
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- Languages -->
+
+<section>
+
+    <h2 class="section-title">Languages</h2>
+
+    <ul>
+
+        <li>
+            <strong>Persian:</strong> Native
+        </li>
+
+        <li>
+            <strong>English:</strong>
+            IELTS Academic — Overall 6.5
+            (Listening 6.0, Reading 6.0, Writing 7.0, Speaking 6.5)
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:mozhgan.ghanat@gmail.com">
+            mozhgan.ghanat@gmail.com
+        </a>
+    </p>
+
+    <p>
+        Arak, Iran
+    </p>
+
+</section>
+
 
 </main>
 
+
 <footer>
-    © 2026 Mozhgan Ghanat. All rights reserved.
+
+    © 2026 Mozhgan Ghanat · Educational Technology Researcher
+
 </footer>
+
 
 </body>
 </html>
