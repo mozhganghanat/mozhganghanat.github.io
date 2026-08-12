@@ -952,3 +952,508 @@ footer {
     }
 
 }
+/* ================================
+Research Page
+================================ */
+
+.research-hero {
+    padding: 100px 0 110px;
+
+    background:
+        radial-gradient(
+            circle at 82% 25%,
+            #e8f4f2 0,
+            #e8f4f2 16%,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #f7faf9 0%,
+            #ffffff 68%
+        );
+
+    border-bottom: 1px solid #edf1f2;
+}
+
+
+.research-hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.research-hero-content {
+    max-width: 720px;
+}
+
+
+.research-hero h1 {
+    margin: 0 0 28px;
+
+    color: #18212f;
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+
+.research-intro {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #5d6873;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+
+/* ================================
+Conceptual Research Symbol
+================================ */
+
+.research-symbol {
+
+    position: relative;
+
+    width: 360px;
+    height: 360px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.symbol-ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid #b9d9d5;
+}
+
+
+.ring-one {
+
+    width: 245px;
+    height: 245px;
+
+    transform: rotate(25deg);
+}
+
+
+.ring-two {
+
+    width: 185px;
+    height: 185px;
+
+    transform: rotate(-25deg);
+
+    border-color: #d6e8e5;
+}
+
+
+.symbol-center {
+
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #287c78;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(31, 55, 63, 0.16);
+}
+
+
+.symbol-center span {
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+.symbol-node {
+
+    position: absolute;
+
+    padding: 9px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e5;
+
+    border-radius: 8px;
+
+    color: #56616d;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.3px;
+
+    box-shadow:
+        0 8px 25px rgba(27, 55, 58, 0.06);
+}
+
+
+.node-top {
+
+    top: 24px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.node-left {
+
+    left: 5px;
+
+    bottom: 72px;
+}
+
+
+.node-right {
+
+    right: 5px;
+
+    bottom: 72px;
+}
+
+
+
+/* ================================
+Research Content
+================================ */
+
+.research-content {
+
+    display: grid;
+
+    grid-template-columns:
+        0.75fr 1.25fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.research-text {
+
+    max-width: 720px;
+}
+
+
+.research-text p {
+
+    margin-top: 0;
+
+    margin-bottom: 24px;
+
+    color: #5f6a74;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+}
+
+
+.research-text strong {
+
+    color: #263238;
+
+    font-weight: 650;
+}
+
+
+
+/* ================================
+Research Principles
+================================ */
+
+.research-principles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.research-principle {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e9e8;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.research-principle:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(27, 55, 58, 0.08);
+}
+
+
+.principle-number {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #287c78;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.research-principle h3 {
+
+    margin: 0 0 10px;
+
+    color: #18212f;
+
+    font-size: 20px;
+}
+
+
+.research-principle p {
+
+    margin: 0;
+
+    color: #626d76;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+
+/* ================================
+Research Statement
+================================ */
+
+.research-statement {
+
+    padding: 100px 0;
+
+    background: #18212f;
+
+    color: #ffffff;
+}
+
+
+.research-statement-box {
+
+    max-width: 850px;
+}
+
+
+.research-statement .eyebrow {
+
+    color: #8ed0ca;
+}
+
+
+.research-statement h2 {
+
+    margin: 0 0 22px;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+}
+
+
+.research-statement p:not(.eyebrow) {
+
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #cbd4d8;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+
+/* ================================
+Research Mobile
+================================ */
+
+@media (max-width: 850px) {
+
+    .research-hero {
+
+        padding: 75px 0 80px;
+    }
+
+
+    .research-hero-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .research-hero-content {
+
+        text-align: center;
+
+        margin: auto;
+    }
+
+
+    .research-symbol {
+
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .research-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .research-principles {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .research-statement {
+
+        padding: 75px 0;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .research-hero h1 {
+
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .research-intro {
+
+        font-size: 17px;
+    }
+
+
+    .research-symbol {
+
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .ring-one {
+
+        width: 205px;
+        height: 205px;
+    }
+
+
+    .ring-two {
+
+        width: 155px;
+        height: 155px;
+    }
+
+
+    .symbol-node {
+
+        font-size: 11px;
+
+        padding: 8px 11px;
+    }
+
+
+    .node-left {
+
+        left: -2px;
+
+        bottom: 55px;
+    }
+
+
+    .node-right {
+
+        right: -2px;
+
+        bottom: 55px;
+    }
+
+
+    .research-statement h2 {
+
+        font-size: 32px;
+    }
+
+}
