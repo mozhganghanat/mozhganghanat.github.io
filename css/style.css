@@ -1458,29 +1458,158 @@ Research Mobile
 
 }
 /* ================================
-   Research Logo
+   Research Symbol — Final Size
 ================================ */
 
-/* ================================
-   Research Logo
-================================ */
+.research-symbol {
+    width: 340px;
+    height: 340px;
 
-/* ================================
-   Research Logo
-================================ */
-
-.research-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     max-width: 100%;
-    overflow: hidden;
+
+    margin: auto;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.research-logo img {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+
+/* Outer Ring */
+
+.ring-one {
+    width: 245px;
+    height: 245px;
+}
+
+
+/* Inner Ring */
+
+.ring-two {
+    width: 185px;
+    height: 185px;
+}
+
+
+/* Center */
+
+.symbol-center {
+    width: 76px;
+    height: 76px;
+}
+
+.symbol-center span {
+    font-size: 32px;
+}
+
+
+/* Labels */
+
+.symbol-node {
+    padding: 10px 15px;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* Top Label */
+
+.node-top {
+    top: 22px;
+}
+
+
+/* Left Label */
+
+.node-left {
+    left: 0;
+    bottom: 67px;
+}
+
+
+/* Right Label */
+
+.node-right {
+    right: 0;
+    bottom: 67px;
+}
+
+
+/* ================================
+   Research Symbol — Mobile
+================================ */
+
+@media (max-width: 850px) {
+
+    .research-symbol {
+        width: 320px;
+        height: 320px;
+    }
+
+    .ring-one {
+        width: 230px;
+        height: 230px;
+    }
+
+    .ring-two {
+        width: 175px;
+        height: 175px;
+    }
+
+}
+
+
+/* ================================
+   Research Symbol — Small Mobile
+================================ */
+
+@media (max-width: 550px) {
+
+    .research-symbol {
+        width: 290px;
+        height: 290px;
+    }
+
+    .ring-one {
+        width: 215px;
+        height: 215px;
+    }
+
+    .ring-two {
+        width: 165px;
+        height: 165px;
+    }
+
+    .symbol-center {
+        width: 68px;
+        height: 68px;
+    }
+
+    .symbol-center span {
+        font-size: 29px;
+    }
+
+    .symbol-node {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .node-left {
+        left: 0;
+        bottom: 57px;
+    }
+
+    .node-right {
+        right: 0;
+        bottom: 57px;
+    }
+
+    .node-top {
+        top: 18px;
+    }
+
 }
