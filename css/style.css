@@ -2058,3 +2058,624 @@ Research Mobile
     }
 
 }
+/* =================================
+   HOME PAGE — VISUAL ENHANCEMENT
+   Add this block at the END of style.css
+================================= */
+
+
+/* =================================
+   Hero — More Visual Depth
+================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 115px 0 125px;
+
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(40, 124, 120, 0.12) 0,
+            rgba(40, 124, 120, 0.06) 18%,
+            transparent 42%
+        ),
+        radial-gradient(
+            circle at 12% 85%,
+            rgba(40, 124, 120, 0.045) 0,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f6faf9 0%,
+            #ffffff 65%
+        );
+}
+
+
+/* subtle decorative shape */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -120px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(40, 124, 120, 0.10);
+
+    pointer-events: none;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero .eyebrow::before {
+    content: "";
+
+    width: 28px;
+    height: 2px;
+
+    background: #287c78;
+
+    border-radius: 10px;
+}
+
+
+.hero h1 {
+    max-width: 850px;
+
+    font-weight: 700;
+
+    text-wrap: balance;
+}
+
+
+.hero-text {
+    max-width: 680px;
+
+    margin-top: 0;
+
+    font-size: 18px;
+
+    line-height: 1.85;
+}
+
+
+/* =================================
+   Hero Buttons
+================================= */
+
+.hero-buttons {
+    margin-top: 38px;
+
+    gap: 14px;
+}
+
+
+.hero .button {
+    padding: 12px 22px;
+
+    border-radius: 9px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.hero .button.primary {
+    box-shadow:
+        0 8px 20px rgba(40, 124, 120, 0.16);
+}
+
+
+.hero .button.primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 26px rgba(40, 124, 120, 0.22);
+}
+
+
+.hero .button.secondary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(27, 55, 58, 0.06);
+}
+
+
+/* =================================
+   Section Headings
+================================= */
+
+.section-heading {
+    position: relative;
+}
+
+
+.section-heading h2 {
+    letter-spacing: -0.8px;
+}
+
+
+.section-heading p:not(.eyebrow) {
+    line-height: 1.8;
+}
+
+
+/* =================================
+   Areas of Interest Cards
+================================= */
+
+.cards {
+    gap: 22px;
+}
+
+
+.section:not(.light-section) .card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 230px;
+
+    padding: 32px;
+
+    border: 1px solid #e1e9e7;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #fbfdfc 100%
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* small accent line */
+
+.section:not(.light-section) .card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #287c78;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+}
+
+
+.section:not(.light-section) .card:hover {
+    transform: translateY(-6px);
+
+    border-color: #cddedb;
+
+    box-shadow:
+        0 18px 40px rgba(27, 55, 58, 0.09);
+}
+
+
+.section:not(.light-section) .card:hover::before {
+    transform: scaleX(1);
+}
+
+
+.section:not(.light-section) .card h3 {
+    margin-bottom: 15px;
+
+    font-size: 21px;
+
+    letter-spacing: -0.2px;
+}
+
+
+.section:not(.light-section) .card p {
+    line-height: 1.75;
+}
+
+
+/* =================================
+   Latest Articles
+================================= */
+
+.article-preview {
+    position: relative;
+
+    padding: 38px 40px;
+
+    border-radius: 16px;
+
+    border: 1px solid #dfe8e6;
+
+    box-shadow:
+        0 10px 30px rgba(27, 55, 58, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.article-preview:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(27, 55, 58, 0.07);
+}
+
+
+.article-preview::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 25px;
+    bottom: 25px;
+
+    width: 3px;
+
+    background: #287c78;
+
+    border-radius: 10px;
+}
+
+
+.article-preview > div {
+    padding-left: 8px;
+}
+
+
+.article-preview h3 {
+    font-size: 25px;
+
+    letter-spacing: -0.3px;
+}
+
+
+.article-preview p:not(.article-label) {
+    margin-bottom: 0;
+
+    line-height: 1.75;
+}
+
+
+/* =================================
+   Resources
+================================= */
+
+.resource-box {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2f8f7 0%,
+            #f8fbfa 100%
+        );
+
+    border: 1px solid #dbe8e5;
+
+    box-shadow:
+        0 12px 30px rgba(27, 55, 58, 0.045);
+}
+
+
+.resource-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    right: -65px;
+    bottom: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(40, 124, 120, 0.07);
+}
+
+
+.resource-box h3,
+.resource-box p {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.resource-box h3 {
+    font-size: 21px;
+}
+
+
+.resource-box p {
+    line-height: 1.8;
+}
+
+
+/* =================================
+   Selected Work
+================================= */
+
+.light-section .card {
+    position: relative;
+
+    padding: 32px;
+
+    min-height: 215px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8e7;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.light-section .card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cddedb;
+
+    box-shadow:
+        0 18px 38px rgba(27, 55, 58, 0.08);
+}
+
+
+.light-section .card h3 {
+    font-size: 22px;
+
+    margin-bottom: 14px;
+}
+
+
+.light-section .card p {
+    line-height: 1.75;
+
+    margin-bottom: 22px;
+}
+
+
+.light-section .card .text-link {
+    display: inline-block;
+
+    margin-top: auto;
+}
+
+
+/* =================================
+   About Home
+================================= */
+
+.about-home {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.about-home h2 {
+    letter-spacing: -0.8px;
+}
+
+
+.about-home > div:last-child {
+    max-width: 700px;
+}
+
+
+.about-home p {
+    line-height: 1.85;
+}
+
+
+/* =================================
+   Contact — More Elegant
+================================= */
+
+.contact-section {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(142, 208, 202, 0.10),
+            transparent 35%
+        ),
+        #18212f;
+}
+
+
+.contact-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -150px;
+    bottom: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(142, 208, 202, 0.12);
+}
+
+
+.contact-content {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.contact-content h2 {
+    font-size: clamp(38px, 4vw, 50px);
+
+    letter-spacing: -1px;
+}
+
+
+.contact-section .button.primary {
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.contact-section .button.primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =================================
+   Footer
+================================= */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* =================================
+   Home — Better Vertical Rhythm
+================================= */
+
+.hero + .section {
+    padding-top: 100px;
+}
+
+
+.section + .section {
+    padding-top: 95px;
+}
+
+
+/* =================================
+   Home Mobile
+================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        padding: 85px 0 90px;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+    }
+
+    .section:not(.light-section) .card,
+    .light-section .card {
+        min-height: auto;
+    }
+
+    .article-preview {
+        padding: 32px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding: 70px 0 75px;
+    }
+
+    .hero .eyebrow {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-text {
+        font-size: 16.5px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero .button {
+        padding: 11px 17px;
+    }
+
+    .section:not(.light-section) .card,
+    .light-section .card {
+        padding: 28px;
+        border-radius: 14px;
+    }
+
+    .article-preview {
+        padding: 28px;
+        border-radius: 14px;
+    }
+
+    .resource-box {
+        padding: 30px;
+        border-radius: 14px;
+    }
+
+}
