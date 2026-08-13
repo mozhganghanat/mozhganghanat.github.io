@@ -1613,3 +1613,140 @@ Research Mobile
     }
 
 }
+/* =================================
+   Research Symbol — Responsive Fix
+================================ */
+
+.research-hero-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 50px;
+}
+
+.research-symbol {
+    width: 320px;
+    height: 320px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* Rings */
+
+.ring-one {
+    width: 225px;
+    height: 225px;
+}
+
+.ring-two {
+    width: 170px;
+    height: 170px;
+}
+
+
+/* Center */
+
+.symbol-center {
+    width: 72px;
+    height: 72px;
+}
+
+.symbol-center span {
+    font-size: 30px;
+}
+
+
+/* Labels */
+
+.symbol-node {
+    padding: 9px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.node-top {
+    top: 20px;
+}
+
+.node-left {
+    left: 0;
+    bottom: 63px;
+}
+
+.node-right {
+    right: 0;
+    bottom: 63px;
+}
+
+
+/* =================================
+   Tablet
+================================ */
+
+@media (max-width: 850px) {
+
+    .research-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .research-symbol {
+        width: 310px;
+        height: 310px;
+        max-width: 100%;
+    }
+
+}
+
+
+/* =================================
+   Small Mobile
+================================ */
+
+@media (max-width: 550px) {
+
+    .research-symbol {
+        width: 280px;
+        height: 280px;
+    }
+
+    .ring-one {
+        width: 205px;
+        height: 205px;
+    }
+
+    .ring-two {
+        width: 155px;
+        height: 155px;
+    }
+
+    .symbol-center {
+        width: 66px;
+        height: 66px;
+    }
+
+    .symbol-center span {
+        font-size: 28px;
+    }
+
+    .symbol-node {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .node-top {
+        top: 17px;
+    }
+
+    .node-left {
+        left: 0;
+        bottom: 53px;
+    }
+
+    .node-right {
+        right: 0;
+        bottom: 53px;
+    }
+
+}
