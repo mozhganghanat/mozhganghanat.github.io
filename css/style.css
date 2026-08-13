@@ -1944,3 +1944,117 @@ Research Mobile
     }
 
 }
+/* =================================
+   RESEARCH LOGO — FINAL FIX
+================================= */
+
+.research-hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(300px, 0.9fr);
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+/* Logo container */
+
+.research-logo {
+    width: 100%;
+
+    max-width: 380px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: visible;
+}
+
+
+/* Actual logo image */
+
+.research-logo img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 380px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    .research-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .research-hero-content {
+        text-align: center;
+
+        margin: 0 auto;
+    }
+
+    .research-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .research-logo {
+        width: 100%;
+
+        max-width: 340px;
+
+        margin: 0 auto;
+    }
+
+    .research-logo img {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 550px) {
+
+    .research-hero {
+        padding: 70px 0 75px;
+    }
+
+    .research-hero-grid {
+        gap: 35px;
+    }
+
+    .research-logo {
+        max-width: 280px;
+    }
+
+    .research-logo img {
+        max-width: 280px;
+    }
+
+}
