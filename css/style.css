@@ -1750,3 +1750,197 @@ Research Mobile
     }
 
 }
+/* =================================
+   FINAL RESEARCH SYMBOL OVERRIDE
+   ================================= */
+
+.research-hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: 40px;
+    align-items: center;
+}
+
+
+/* Give the research symbol more room */
+
+.research-symbol {
+    width: 380px;
+    height: 380px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Outer ring */
+
+.research-symbol .ring-one {
+    width: 270px;
+    height: 270px;
+}
+
+
+/* Inner ring */
+
+.research-symbol .ring-two {
+    width: 205px;
+    height: 205px;
+}
+
+
+/* Center */
+
+.research-symbol .symbol-center {
+    width: 78px;
+    height: 78px;
+}
+
+.research-symbol .symbol-center span {
+    font-size: 32px;
+}
+
+
+/* Labels */
+
+.research-symbol .symbol-node {
+    padding: 10px 15px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    max-width: none;
+}
+
+
+/* Top */
+
+.research-symbol .node-top {
+    top: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* Left */
+
+.research-symbol .node-left {
+    left: 0;
+
+    bottom: 72px;
+}
+
+
+/* Right */
+
+.research-symbol .node-right {
+    right: 0;
+
+    bottom: 72px;
+}
+
+
+/* =================================
+   TABLET
+   ================================= */
+
+@media (max-width: 850px) {
+
+    .research-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .research-symbol {
+        width: 340px;
+        height: 340px;
+    }
+
+    .research-symbol .ring-one {
+        width: 245px;
+        height: 245px;
+    }
+
+    .research-symbol .ring-two {
+        width: 185px;
+        height: 185px;
+    }
+
+    .research-symbol .node-left {
+        left: 0;
+        bottom: 62px;
+    }
+
+    .research-symbol .node-right {
+        right: 0;
+        bottom: 62px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+   ================================= */
+
+@media (max-width: 550px) {
+
+    .research-hero-grid {
+        gap: 35px;
+    }
+
+    .research-symbol {
+        width: 290px;
+        height: 290px;
+    }
+
+    .research-symbol .ring-one {
+        width: 210px;
+        height: 210px;
+    }
+
+    .research-symbol .ring-two {
+        width: 160px;
+        height: 160px;
+    }
+
+    .research-symbol .symbol-center {
+        width: 66px;
+        height: 66px;
+    }
+
+    .research-symbol .symbol-center span {
+        font-size: 28px;
+    }
+
+    .research-symbol .symbol-node {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+    .research-symbol .node-top {
+        top: 14px;
+    }
+
+    .research-symbol .node-left {
+        left: 0;
+        bottom: 52px;
+    }
+
+    .research-symbol .node-right {
+        right: 0;
+        bottom: 52px;
+    }
+
+}
