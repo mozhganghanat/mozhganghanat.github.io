@@ -1465,6 +1465,10 @@ Research Mobile
    Research Logo
 ================================ */
 
+/* ================================
+   Research Logo
+================================ */
+
 .research-logo {
     display: flex;
     justify-content: center;
@@ -1476,11 +1480,7 @@ Research Mobile
 
 .research-logo img {
     display: block;
-    width: min(400px, 100%);
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    max-width: 100%;
-}
-    width: min(320px, 100%);
-    height: auto;
-    max-width: 100%;
 }
